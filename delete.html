@@ -1,10 +1,24 @@
 <head>
     <script src="./main.js"></script>
 </head>
+
 <body>
     <h1>Confirm DELETE</h1>
-    <div id="courseId">?</div>
+    <button id="confirmDelete">CONFIRM DELETE</button>
+    <div id="target">?</div>
+
 </body>
 <script>
-    window.courseId.innerText = getCourseId();
+    // window.courseId.innerText = getCourseId();
+    const courseId = readCourse("target");
+
+    function deleteCourse() {
+        const baseURL = "http://localhost:8081/api";
+        const coursesURI = "/courses/" + getCourseId();
+
+        fetch(baseURL + coursesURI, {method: "DELETE"}).then(r => location = "index.html");
+
+    }
+
+    confirmDelete.addEventListener("click", deleteCourse)
 </script>
