@@ -11,7 +11,7 @@ function renderCourse(course, targetID){
     <h1>${course.courseName}</h1> 
     ID:${course.id},
     <span class ="dept">DEPT:${course.dept}</span>,
-    <span class="number">Number${course.courseNum}</span>,        
+    <span class="number">Number:${course.courseNum}</span>,        
     <h2>${course.instructor}</h2>
     <span class="number">${course.startDate}</span>
     <h2 class="days">${course.numDays}</h2>
@@ -35,7 +35,7 @@ function renderCourseForm(course, targetID){
     <label>Department: <input id="dept" value="${course.dept}" type="text"></label>
     <label>Course Number: <input id="courseNum" value="${course.courseNum}" type="number"></label>
     <label>Instructor: <input id="instructor" value="${course.instructor}" type="text"></label>
-    <label>Start Date: <input id="startDate" value="${course.startDate}" type="date"></label>
+    <label>Start Date: <input id="startDate" value="${course.startDate}" type="text"></label>
     <label>Number Days: <input id="numDays" value="${course.numDays}" type="number"></label>
    
      `;
